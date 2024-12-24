@@ -1,0 +1,25 @@
+
+.card-container {
+    margin: 0;
+    width: 100%;
+  }
+  
+  .card-content {
+    margin: 2rem auto;
+    width: 100%;
+  }
+  
+  .card-text {
+    margin: 1rem 0;
+  }
+  
+  .reveal-text {
+    margin: 2rem 0;
+  }
+  
+  
+  
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
