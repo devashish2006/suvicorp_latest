@@ -8,6 +8,7 @@ import { TextGenerateEffectDemo } from './components/TextGenerateEffect';
 import ContactUs from './components/page/ContactUs.jsx';
 import About from './components/page/About.jsx';
 import Services from './components/page/services.jsx';
+import Pro from './components/page/Pro.jsx';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/pricing" element={<Pro />} />
         </Routes>
 
         <TailwindFooter /> {/* Footer at the bottom */}

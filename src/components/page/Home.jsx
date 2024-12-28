@@ -18,7 +18,7 @@ function Home() {
         <div className='bg-black'>
             <HeroParallaxDemo />
             <GoogleGeminiEffectDemo />
-            <SparklesPreview />
+            {/* <SparklesPreview /> */}
             <CardHoverEffectDemo />
             <MultiStepLoaderDemo />
             {/* <HeroHighlightDemo /> */}
