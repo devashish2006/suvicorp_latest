@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export function NavbarDemo() {
   return (
     <div className="relative w-full flex items-center justify-center">
-      <Navbar className="top-2" />
+      <Navbar />
       <p className="text-black dark:text-white">
         The Navbar will show on top of the page
       </p>
@@ -16,69 +16,136 @@ export function NavbarDemo() {
 
 function Navbar({ className }) {
   const [active, setActive] = useState(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <div className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}>
-      <Menu setActive={setActive}>
-        <MenuItem setActive={setActive} active={active} item="Services">
-          <div className="flex flex-col space-y-4 text-sm">
-            <Link to="/" className="text-white hover:text-blue-500">Digital Transformation</Link>
-            <Link to="/" className="text-white hover:text-blue-500">CFO Consulting</Link>
-            <Link to="/" className="text-white hover:text-blue-500">Executive Services</Link>
-            <Link to="/" className="text-white hover:text-blue-500">Tax Services</Link>
-            <Link to="/" className="text-white hover:text-blue-500">Audit Readiness</Link>
-            <Link to="/" className="text-white hover:text-blue-500">Risk Consulting</Link>
-          </div>
-        </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Products">
-          <div className="text-sm grid grid-cols-2 gap-10 p-4">
-            <ProductItem
-              title="Cfo Dashboard"
-              to="/"
-              src="https://assets.aceternity.com/demos/algochurn.webp"
-              description="Streamline financial decision-making with comprehensive analytics and real-time insights."
-            />
-            <ProductItem
-              title="Audit Manager"
-              to="/"
-              src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
-              description="Simplify audit processes with efficient tracking, reporting, and compliance tools."
-            />
-            <ProductItem
-              title="Risk Manager"
-              to="/"
-              src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
-              description="Proactively identify, assess, and mitigate business risks with AI-driven solutions."
-            />
-            <ProductItem
-              title="Real-Time Analytics Dashboard"
-              to="/"
-              src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
-              description=" Visualize and monitor key metrics for actionable insights in real time."
-            />
-          </div>
-        </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Pricing">
-          <div className="flex flex-col space-y-4 text-sm">
-            <Link to="/" className="text-white hover:text-blue-500">Individual</Link>
-            <Link to="/" className="text-white hover:text-blue-500">Team</Link>
-            <Link to="/" className="text-white hover:text-blue-500">Enterprise</Link>
-          </div>
-        </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="About Us">
-          <div className="flex flex-col space-y-4 text-sm">
-            <Link to="/about" className="text-white hover:text-blue-500">Individual</Link>
-            <Link to="/about" className="text-white hover:text-blue-500">Team</Link>
-            <Link to="/about" className="text-white hover:text-blue-500">Enterprise</Link>
-          </div>
-        </MenuItem>
-        <MenuItem setActive={setActive} active={active} item="Contact Us">
-          <div className="flex flex-col space-y-4 text-sm">
-            <Link to="/contact" className="text-white hover:text-blue-500">Individual</Link>
-            <Link to="/contact" className="text-white hover:text-blue-500">Team</Link>
-            <Link to="/contact" className="text-white hover:text-blue-500">Enterprise</Link>
-          </div>
-        </MenuItem>
-      </Menu>
+    <div className={cn("fixed top-0 inset-x-0 w-full bg-black z-50", className)}>
+      {/* Mobile Hamburger Menu */}
+      <div className="flex items-center justify-between p-4 bg-black text-white lg:hidden">
+        <div className="text-lg font-bold">My Navbar</div>
+        <button
+          className="text-white focus:outline-none"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            {isMenuOpen ? (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            )}
+          </svg>
+        </button>
+      </div>
+
+      {/* Navbar Content */}
+      <div
+        className={cn(
+          "lg:flex lg:items-center lg:justify-center lg:bg-black lg:text-white",
+          isMenuOpen ? "block" : "hidden"
+        )}
+      >
+        <Menu setActive={setActive}>
+          <MenuItem setActive={setActive} active={active} item="Home">
+            <div className="flex flex-col space-y-4 text-sm">
+              <Link to="/" className="text-white hover:text-blue-500">
+                Go to Home
+              </Link>
+            </div>
+          </MenuItem>
+          <MenuItem setActive={setActive} active={active} item="Services">
+            <div className="flex flex-col space-y-4 text-sm">
+              <Link to="/services" className="text-white hover:text-blue-500">
+                Digital Transformation
+              </Link>
+              <Link to="/services" className="text-white hover:text-blue-500">
+                CFO Consulting
+              </Link>
+              <Link to="/services" className="text-white hover:text-blue-500">
+                Executive Services
+              </Link>
+              <Link to="/services" className="text-white hover:text-blue-500">
+                Tax Services
+              </Link>
+              <Link to="/services" className="text-white hover:text-blue-500">
+                Audit Readiness
+              </Link>
+              <Link to="/services" className="text-white hover:text-blue-500">
+                Risk Consulting
+              </Link>
+            </div>
+          </MenuItem>
+          <MenuItem setActive={setActive} active={active} item="Products">
+            <div className="text-sm grid grid-cols-2 gap-10 p-4">
+              <ProductItem
+                title="Cfo Dashboard"
+                to="/"
+                src="https://assets.aceternity.com/demos/algochurn.webp"
+                description="Streamline financial decision-making with comprehensive analytics and real-time insights."
+              />
+              <ProductItem
+                title="Audit Manager"
+                to="/"
+                src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
+                description="Simplify audit processes with efficient tracking, reporting, and compliance tools."
+              />
+              <ProductItem
+                title="Risk Manager"
+                to="/"
+                src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
+                description="Proactively identify, assess, and mitigate business risks with AI-driven solutions."
+              />
+              <ProductItem
+                title="Real-Time Analytics Dashboard"
+                to="/"
+                src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
+                description="Visualize and monitor key metrics for actionable insights in real time."
+              />
+            </div>
+          </MenuItem>
+          <MenuItem setActive={setActive} active={active} item="Pricing">
+            <div className="flex flex-col space-y-4 text-sm">
+              <Link to="/pricing" className="text-white hover:text-blue-500">
+                Starter Plan
+              </Link>
+              <Link to="/pricing" className="text-white hover:text-blue-500">
+                Professional Plan
+              </Link>
+              <Link to="/pricing" className="text-white hover:text-blue-500">
+                Enterprise Plan
+              </Link>
+            </div>
+          </MenuItem>
+          <MenuItem setActive={setActive} active={active} item="About Us">
+            <div className="flex flex-col space-y-4 text-sm">
+              <Link to="/about" className="text-white hover:text-blue-500">
+                Go to About
+              </Link>
+            </div>
+          </MenuItem>
+          <MenuItem setActive={setActive} active={active} item="Contact Us">
+            <div className="flex flex-col space-y-4 text-sm">
+              <Link to="/contact" className="text-white hover:text-blue-500">
+                Go to Contact
+              </Link>
+            </div>
+          </MenuItem>
+        </Menu>
+      </div>
     </div>
   );
 }

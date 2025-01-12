@@ -15,31 +15,31 @@ export function InfiniteMovingCardsDemo() {
 const testimonials = [
   {
     quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
+      "My goal has always been to help businesses navigate the evolving financial landscape. By combining expert financial strategies with innovative technology, we empower our clients to achieve sustained growth and success in a rapidly changing world.",
     name: "Charles Dickens",
-    title: "A Tale of Two Cities",
+    title: "Empowering Businesses for Long-Term Success",
   },
   {
     quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
+      "With years of experience in finance, I’m dedicated to guiding businesses through financial complexities. Our CFO consulting services focus on creating tailored solutions that optimize performance and ensure compliance for long-term success.",
     name: "William Shakespeare",
-    title: "Hamlet",
+    title: "Optimizing Financial Strategies for Growth",
   },
   {
-    quote: "All that we see or seem is but a dream within a dream.",
+    quote: "Risk is an integral part of business, but it doesn’t have to be a roadblock. I’m committed to providing businesses with proactive strategies to manage and mitigate risks, enabling them to grow with confidence and foresight",
     name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
+    title: "Turning Risk into Opportunity",
   },
   {
     quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
+      "Digital transformation is about more than just technology; it's about transforming the way businesses operate. I’m passionate about helping organizations harness the power of technology to improve efficiency and drive growth.",
     name: "Jane Austen",
-    title: "Pride and Prejudice",
+    title: "Harnessing Technology for Business Growth",
   },
   {
     quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
+      "Leadership is essential for business success. I focus on providing executives with the insights and strategies they need to make informed decisions, navigate challenges, and lead their teams with clarity and confidence.",
     name: "Herman Melville",
-    title: "Moby-Dick",
+    title: "Guiding Leadership Toward Excellence",
   },
 ];

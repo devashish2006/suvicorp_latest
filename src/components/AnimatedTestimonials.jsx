@@ -8,23 +8,23 @@ export function AnimatedTestimonialsDemo() {
   const testimonials = [
     {
       quote:
-        "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-      name: "Sarah Chen",
-      designation: "Product Manager at TechFlow",
+        "Head, Accounting & Digital Transformation",
+      name: "Jatin Bhatia",
+      designation: "Head, Accounting & Digital Transformation",
       src: jatinBhatia,
     },
     {
       quote:    
-        "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
-      name: "Michael Rodriguez",
-      designation: "CTO at InnovateSphere",
+        "Developer",
+      name: "Ankur Tiwari",
+      designation: "System Engineer",
       src: AmanGarg,
     },
     {
       quote:
-        "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
-      name: "Emily Watson",
-      designation: "Operations Director at CloudScale",
+        "Lead Manage",
+      name: "Aman Garg",
+      designation: "JS Developer",
       src: AnkurTiwari,
     },
    

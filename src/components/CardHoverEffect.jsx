@@ -9,39 +9,58 @@ export function CardHoverEffectDemo() {
 }
 export const projects = [
   {
-    title: "Stripe",
+    title: "Digital Transformation",
     description:
-      "A technology company that builds economic infrastructure for the internet.",
+      "Empowering businesses with innovative technology solutions to drive growth.",
     link: "https://stripe.com",
   },
   {
-    title: "Netflix",
+    title: "CFO Consulting",
     description:
-      "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
+      "Strategic financial expertise to optimize business performance.",
     link: "https://netflix.com",
   },
   {
-    title: "Google",
+    title: "Executive Services",
     description:
-      "A multinational technology company that specializes in Internet-related services and products.",
+      "Tailored solutions to support leadership and organizational goals.",
     link: "https://google.com",
   },
   {
-    title: "Meta",
+    title: "Tax Services",
     description:
-      "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
+      "Comprehensive tax planning and compliance for financial efficiency.",
     link: "https://meta.com",
   },
   {
-    title: "Amazon",
+    title: "Audit Readiness",
     description:
-      "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
+      "Ensuring seamless audit preparation with accurate financial insights.",
     link: "https://amazon.com",
   },
   {
-    title: "Microsoft",
+    title: "Risk Consulting",
     description:
-      "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
+      "Proactive strategies to identify, assess, and mitigate risks.",
     link: "https://microsoft.com",
   },
+  {
+    title: "Cfo Dashboard",
+    description:
+      "Streamline financial decision-making with comprehensive analytics and real-time insights.",
+    link: "https://microsoft.com",
+  },
+  {
+    title: "Audit Manager",
+    description:
+      "Simplify audit processes with efficient tracking, reporting, and compliance tools.",
+    link: "https://microsoft.com",
+  },
+  {
+    title: "Real-Time Analytics Dashboard",
+    description:
+      "Visualize and monitor key metrics for actionable insights in real time.",
+    link: "https://microsoft.com",
+  },
+  
 ];

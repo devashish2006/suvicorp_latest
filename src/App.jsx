@@ -4,11 +4,11 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { NavbarDemo } from './components/navbar';
 import Home from './components/page/Home';
 import TailwindFooter from './components/Fotter';
-import { TextGenerateEffectDemo } from './components/TextGenerateEffect';
 import ContactUs from './components/page/ContactUs.jsx';
 import About from './components/page/About.jsx';
 import Services from './components/page/services.jsx';
-import Pro from './components/page/Pro.jsx';
+// import Pro from './components/page/Pro.jsx';
+import Pricing from './components/page/Pricing.jsx';
 
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/pricing" element={<Pro />} />
+          <Route path="/pricing" element={<Pricing />} />
         </Routes>
 
         <TailwindFooter /> {/* Footer at the bottom */}

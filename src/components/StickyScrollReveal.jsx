@@ -4,24 +4,24 @@ import { StickyScroll } from "./ui/sticky-scroll-reveal";
 
 const content = [
   {
-    title: "Collaborative Editing",
+    title: "Transforming Businesses Through Technology and Expertise",
     description:
-      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+     " We specialize in empowering businesses with cutting-edge digital transformation solutions, streamlining processes, and driving growth through innovation. Our expert services help companies thrive in today’s fast-paced, technology-driven market.",
     content: (
       <div
         className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        Collaborative Editing
+        Transforming Businesses Through Technology and Expertise
       </div>
     ),
   },
   {
-    title: "Real time changes",
+    title: "Comprehensive Financial Consulting and Leadership Support",
     description:
-      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+      "Our CFO consulting and executive services provide strategic financial expertise to optimize business performance, support leadership, and achieve organizational goals. We partner with companies to align financial strategies with long-term success.",
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
         <img
-          src="/linear.webp"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZn76l4RpH02RJBS4Hsv0dqOmV5Gu1j6GOYQ&s"
           width={300}
           height={300}
           className="h-full w-full object-cover"
@@ -30,24 +30,24 @@ const content = [
     ),
   },
   {
-    title: "Version control",
+    title: "Tax Planning, Compliance, and Risk Management",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "We offer comprehensive tax services, ensuring businesses remain compliant while optimizing financial efficiency. Our risk consulting services proactively identify, assess, and mitigate risks, safeguarding the long-term stability of your business.",
     content: (
       <div
         className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
-        Version control
+       Tax Planning, Compliance, and Risk Management
       </div>
     ),
   },
   {
-    title: "Running out of content",
+    title: "Innovative Tools for Business Efficiency",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "Our suite of products, including the CFO Dashboard, Audit Manager, Risk Manager, and Real-Time Analytics Dashboard, provides businesses with powerful tools to gain actionable insights, streamline audit processes, and manage risks effectively for improved decision-making.",
     content: (
       <div
         className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
-        Running out of content
+        Innovative Tools for Business Efficiency
       </div>
     ),
   },
