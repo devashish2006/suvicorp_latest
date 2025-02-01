@@ -5,28 +5,28 @@ import { IconSquareRoundedX } from "@tabler/icons-react";
 
 const loadingStates = [
   {
-    text: "Buying a condo",
+    text: "Audit & Assurance Solutions",
   },
   {
-    text: "Travelling in a flight",
+    text: "Risk & Compliance Solutions",
   },
   {
-    text: "Meeting Tyler Durden",
+    text: "Tax Advisory & Compliance",
   },
   {
-    text: "He makes soap",
+    text: "Financial & Business Consulting",
   },
   {
-    text: "We goto a bar",
+    text: "Technology & Digital Transformation",
   },
   {
-    text: "Start a fight",
+    text: "Industry-Specific Solutions",
   },
   {
-    text: "We like it",
+    text: "Fraud & Forensic Services",
   },
   {
-    text: "Welcome to F**** C***",
+    text: "ESG & Sustainability Solutions",
   },
 ];
 
@@ -44,7 +44,7 @@ export function MultiStepLoaderDemo() {
           boxShadow:
             "0px -1px 0px 0px #ffffff40 inset, 0px 1px 0px 0px #ffffff40 inset",
         }}>
-        Click to load
+        Our Products  
       </button>
       {loading && (
         <button

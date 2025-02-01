@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { HoveredLink, Menu, MenuItem, ProductItem } from "./ui/navbar-menu";
-import { cn } from "../lib/utils";
 import { Link } from "react-router-dom";
+import { cn } from "../lib/utils";
 
 export function NavbarDemo() {
   return (
@@ -22,7 +21,7 @@ function Navbar({ className }) {
     <div className={cn("fixed top-0 inset-x-0 w-full bg-black z-50", className)}>
       {/* Mobile Hamburger Menu */}
       <div className="flex items-center justify-between p-4 bg-black text-white lg:hidden">
-        <div className="text-lg font-bold">My Navbar</div>
+        <div className="text-lg font-bold">SUVICORP</div>
         <button
           className="text-white focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -36,116 +35,43 @@ function Navbar({ className }) {
             className="w-6 h-6"
           >
             {isMenuOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             )}
           </svg>
         </button>
       </div>
 
       {/* Navbar Content */}
-      <div
-        className={cn(
-          "lg:flex lg:items-center lg:justify-center lg:bg-black lg:text-white",
-          isMenuOpen ? "block" : "hidden"
-        )}
-      >
-        <Menu setActive={setActive}>
-          <MenuItem setActive={setActive} active={active} item="Home">
-            <div className="flex flex-col space-y-4 text-sm">
-              <Link to="/" className="text-white hover:text-blue-500">
-                Go to Home
-              </Link>
-            </div>
-          </MenuItem>
-          <MenuItem setActive={setActive} active={active} item="Services">
-            <div className="flex flex-col space-y-4 text-sm">
-              <Link to="/services" className="text-white hover:text-blue-500">
-                Digital Transformation
-              </Link>
-              <Link to="/services" className="text-white hover:text-blue-500">
-                CFO Consulting
-              </Link>
-              <Link to="/services" className="text-white hover:text-blue-500">
-                Executive Services
-              </Link>
-              <Link to="/services" className="text-white hover:text-blue-500">
-                Tax Services
-              </Link>
-              <Link to="/services" className="text-white hover:text-blue-500">
-                Audit Readiness
-              </Link>
-              <Link to="/services" className="text-white hover:text-blue-500">
-                Risk Consulting
-              </Link>
-            </div>
-          </MenuItem>
-          <MenuItem setActive={setActive} active={active} item="Products">
-            <div className="text-sm grid grid-cols-2 gap-10 p-4">
-              <ProductItem
-                title="Cfo Dashboard"
-                to="/"
-                src="https://assets.aceternity.com/demos/algochurn.webp"
-                description="Streamline financial decision-making with comprehensive analytics and real-time insights."
-              />
-              <ProductItem
-                title="Audit Manager"
-                to="/"
-                src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
-                description="Simplify audit processes with efficient tracking, reporting, and compliance tools."
-              />
-              <ProductItem
-                title="Risk Manager"
-                to="/"
-                src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
-                description="Proactively identify, assess, and mitigate business risks with AI-driven solutions."
-              />
-              <ProductItem
-                title="Real-Time Analytics Dashboard"
-                to="/"
-                src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
-                description="Visualize and monitor key metrics for actionable insights in real time."
-              />
-            </div>
-          </MenuItem>
-          <MenuItem setActive={setActive} active={active} item="Pricing">
-            <div className="flex flex-col space-y-4 text-sm">
-              <Link to="/pricing" className="text-white hover:text-blue-500">
-                Starter Plan
-              </Link>
-              <Link to="/pricing" className="text-white hover:text-blue-500">
-                Professional Plan
-              </Link>
-              <Link to="/pricing" className="text-white hover:text-blue-500">
-                Enterprise Plan
-              </Link>
-            </div>
-          </MenuItem>
-          <MenuItem setActive={setActive} active={active} item="About Us">
-            <div className="flex flex-col space-y-4 text-sm">
-              <Link to="/about" className="text-white hover:text-blue-500">
-                Go to About
-              </Link>
-            </div>
-          </MenuItem>
-          <MenuItem setActive={setActive} active={active} item="Contact Us">
-            <div className="flex flex-col space-y-4 text-sm">
-              <Link to="/contact" className="text-white hover:text-blue-500">
-                Go to Contact
-              </Link>
-            </div>
-          </MenuItem>
-        </Menu>
+      <div className={cn("lg:flex lg:items-center lg:justify-center lg:bg-black lg:text-white", isMenuOpen ? "block" : "hidden")}>        
+        <nav className="flex flex-col lg:flex-row lg:space-x-6 p-4">
+          <NavItem to="/" label="Home" />
+          <NavItem to="/services" label="Services" />
+          <NavItem to="/products" label="Products" />
+          <NavItem to="/pricing" label="Pricing" />
+          <NavItem to="/about" label="About Us" />
+          <NavItem to="/contact" label="Contact Us" />
+        </nav>
       </div>
     </div>
+  );
+}
+
+function NavItem({ to, label }) {
+  return (
+    <Link to={to} className="text-white hover:text-blue-500 text-lg p-2">
+      {label}
+    </Link>
+  );
+}
+
+export function ProductItem({ title, to, src, description }) {
+  return (
+    <Link to={to} className="block p-4 border border-gray-700 rounded-lg hover:shadow-lg">
+      <img src={src} alt={title} className="w-full h-32 object-cover rounded" />
+      <h3 className="text-white mt-2 text-lg font-bold">{title}</h3>
+      <p className="text-gray-400 text-sm">{description}</p>
+    </Link>
   );
 }

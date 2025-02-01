@@ -9,6 +9,7 @@ import About from './components/page/About.jsx';
 import Services from './components/page/services.jsx';
 // import Pro from './components/page/Pro.jsx';
 import Pricing from './components/page/Pricing.jsx';
+import ProductPage from './components/page/Product.jsx';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/pricing" element={<Pricing />} />
+          <Route path="/products" element={<ProductPage />} />
         </Routes>
 
         <TailwindFooter /> {/* Footer at the bottom */}

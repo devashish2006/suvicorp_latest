@@ -18,14 +18,14 @@ export function AnimatedTestimonialsDemo() {
         "Developer",
       name: "Ankur Tiwari",
       designation: "System Engineer",
-      src: AmanGarg,
+      src: AnkurTiwari,
     },
     {
       quote:
         "Lead Manage",
       name: "Aman Garg",
       designation: "JS Developer",
-      src: AnkurTiwari,
+      src: AmanGarg,
     },
    
   ];

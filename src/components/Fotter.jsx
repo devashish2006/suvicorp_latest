@@ -232,7 +232,7 @@ export default function TailwindFooter() {
         </Box>
         <Divider sx={{ my: 2, bgcolor: "gray" }} />
         <Typography sx={{ fontSize: "16px", color: "white" }}>
-          Copyright © 2024 Suvicorp
+          Copyright © 2025 Suvicorp
         </Typography>
         <Typography sx={{ fontSize: "14px", color: "white" }}>
         Developed by{" "}
